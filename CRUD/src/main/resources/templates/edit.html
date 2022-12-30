@@ -2,10 +2,11 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>CRUD Sample</title>
+    <title>CRUD編集フォーム</title>
 </head>
 <body>
     <h2>編集フォーム</h2>
+    <div th:if="${validationError}" th:each="error:${validationError}"></div>
     <form method="post" action="#" th:action="@{'/sample/edit/' + ${testForm.id}}" th:object="${testForm}">
         <label for="name">名前</label>
         <input type="text" id="name" name="name" th:value="${testForm.name}"><br>
