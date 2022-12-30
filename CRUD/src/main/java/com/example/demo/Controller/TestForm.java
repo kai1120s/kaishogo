@@ -1,4 +1,4 @@
-package com.example.demo.CrudController;
+package com.example.demo.Controller;
 
 public class TestForm {
 
